@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="600.0" style="-fx-background-color: #1F1E2C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloController">
+   <children>
+      <Label alignment="CENTER" layoutX="129.0" layoutY="121.0" prefHeight="55.0" prefWidth="343.0" text="Weekly Quiz" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="startBtn" layoutX="148.0" layoutY="245.0" mnemonicParsing="false" onAction="#startQuiz" prefHeight="61.0" prefWidth="304.0" style="-fx-background-radius: 21; -fx-background-color: #2780FF;" text="Start Quiz" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
