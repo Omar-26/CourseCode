@@ -4,18 +4,15 @@ import javafx.fxml.FXML;
 
 import java.io.IOException;
 
-public class HelloController
-{
+public class HelloController {
 
-   @FXML
-   private void initialize()
-   {
+    @FXML
+    private void initialize() {
 
-   }
+    }
 
-   @FXML
-   public void startQuiz() throws IOException
-   { 
-      App.setRoot("quiz");
-   }
+    @FXML
+    public void startQuiz() throws IOException {
+        App.setRoot("quiz");
+    }
 }

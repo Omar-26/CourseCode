@@ -31,4 +31,8 @@ The Online Course Management System is built on a robust model-view-controller (
 - **Course Class:** Encapsulates essential course information, including title, description, content, instructor details, and enrolled students.
 - **Quiz and Assignment Classes:** Specialized classes for managing quizzes, assignments, and other course materials, ensuring a dynamic learning experience.
 
+## 🎥 Demo Video
+
+Check out the demo video [here](https://drive.google.com/file/d/1tzYqa7XrNTaOuczIrDrM1C0hPUJlz8qc/view?usp=sharing) to see the Online Course Management System in action!
+
 Let's embark on a journey of knowledge and discovery together! 🚀✨

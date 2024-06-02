@@ -1,4 +1,4 @@
-package system;
+package model;
 
 public class SystemTest
 {
@@ -33,11 +33,9 @@ public class SystemTest
    {
       Account[] newAccounts =
       {
-         new Student("user1", "user1 fullname", "1111", "user1@gmail.com", 2500, 21),
-         new Student("user2", "user2 fullname", "2222", "user2@gmail.com", 2500, 21),
-         new Student("user3", "user3 fullname", "3333", "user3@gmail.com", 2500, 21),
-         new Student("user4", "user4 fullname", "4444", "user4@gmail.com", 2500, 21),
-         new Instructor("user5", "user5 fullname", "5555", "user5@gmail.com", 2500, 21)
+              new Student("student1", "student1 fullname", "s1111", "student1@gmail.com", 2500, 21),
+              new Student("student2", "student2 fullname", "s2222", "student2@gmail.com", 7500, 21),
+              new Instructor("instructor1", "Mr Omar", "i1111", "instructor1@gmail.com", 45200, 42)
       };
       for (var newAccount : newAccounts)
       {
@@ -46,11 +44,12 @@ public class SystemTest
 
       Course[] newCourses =
       {
-         new Course("CS50", new Instructor("AHmed2s", "1234", "dasdsd", "Ahmed Ashraf"), 30),
-         new Course("CS50", new Instructor("AHmed2s", "1234", "dasdsd", "Ahmed Ashraf"), 70),
-         new Course("CS50", new Instructor("AHmed2s", "1234", "dasdsd", "Ahmed Ashraf"), 40),
-         new Course("CS50", new Instructor("AHmed2s", "1234", "dasdsd", "Ahmed Ashraf"), 50),
-         new Course("Data Structure", new Instructor("UC San Diego", "1234", "dasdsd", "Ahmed Ashraf"), 100)
+              new Course("Data Structures", new Instructor("UC San Diego", "1234", "dasdsd", "UC San Diego"), 30),
+              new Course("Algorithmic Toolbox", new Instructor("UC San Diego", "1234", "dasdsd", "UC San Diego"), 70),
+              new Course("Java Programming and Software Engineering", new Instructor("Duke University", "1234", "dasdsd", "Duke University"), 40),
+              new Course("Machine Learning Specialization", new Instructor("Andrew Ng", "1234", "dasdsd", "Andrew Ng"), 50),
+              new Course("Deep Learning Specialization", new Instructor("Andrew Ng", "1234", "dasdsd", "Andrew Ng"), 100),
+              new Course("Python for Everybody Specialization", new Instructor("University of Michigan", "1234", "dasdsd", "University of Michigan"), 80)
       };
 
       for (var course : newCourses)

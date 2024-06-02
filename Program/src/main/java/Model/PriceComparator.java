@@ -2,11 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package system;
+package model;
 
 import java.util.Comparator;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 
 /**

@@ -1,41 +1,297 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.TilePane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="960.0" style="-fx-background-color: #1F1E2C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyLearningController">
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="683.0" prefWidth="960.0" style="-fx-background-color: #1F1E2C;"
+            xmlns="http://javafx.com/javafx/21" fx:controller="controller.MyLearningController">
+    <center>
+        <VBox fx:id="cardLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="486.0" prefWidth="714.0" style="-fx-background-color: #1F1E2C;"
+              BorderPane.alignment="TOP_LEFT">
+            <children>
+                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefHeight="83.0" prefWidth="714.0" style="-fx-background-color: #242635;">
+                    <children>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                              minWidth="-Infinity" opacity="0.66" prefHeight="31.0" prefWidth="288.0"
+                              style="-fx-background-color: #343645; -fx-background-radius: 10;">
+                            <children>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../../clone/Online-Courses-System/Program/src/main/resources/img/search.png"/>
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets right="5.0"/>
+                                    </HBox.margin>
+                                </ImageView>
+                                <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                           minWidth="-Infinity" orientation="VERTICAL" prefHeight="20.0"
+                                           prefWidth="10.0"/>
+                                <TextField alignment="TOP_LEFT" prefHeight="26.0" prefWidth="236.0"
+                                           promptText="Search or type" style="-fx-background-color: #343645;"/>
+                            </children>
+                            <padding>
+                                <Insets left="10.0"/>
+                            </padding>
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets left="20.0"/>
+                    </padding>
+                    <VBox.margin>
+                        <Insets bottom="10.0"/>
+                    </VBox.margin>
+                </HBox>
+                <VBox accessibleText="50" prefHeight="100.0" prefWidth="1674.0">
+                    <children>
+                        <Label prefHeight="58.0" prefWidth="154.0" style="-fx-font-family: Poppins;"
+                               stylesheets="@../../../css/style.css" text="My Learning" textAlignment="CENTER"
+                               textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="25.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0"/>
+                            </VBox.margin>
+                        </Label>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                              prefHeight="26.0" prefWidth="679.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="41.0"
+                                       style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css"
+                                       text="All" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial Bold" size="17.0"/>
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="20.0" right="30.0"/>
+                                    </HBox.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="110.0"
+                                       style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css"
+                                       text="In Progress" textAlignment="CENTER" textFill="#6b6c80">
+                                    <font>
+                                        <Font name="Arial Bold" size="17.0"/>
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets right="30.0"/>
+                                    </HBox.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="112.0"
+                                       style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css"
+                                       text="Completed" textAlignment="CENTER" textFill="#6b6c80">
+                                    <font>
+                                        <Font name="Arial Bold" size="17.0"/>
+                                    </font>
+                                </Label>
+                                <Region prefHeight="26.0" prefWidth="216.0"/>
+                                <Button fx:id="addCourseB" mnemonicParsing="false" onAction="#AddCourse"
+                                        prefHeight="27.0" prefWidth="123.0"
+                                        style="-fx-background-color: #2780FF; -fx-background-radius: 50;"
+                                        text="Add course" textFill="WHITE" visible="false">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIcon fill="WHITE" glyphName="PLUS"/>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                    <HBox.margin>
+                                        <Insets right="10.0"/>
+                                    </HBox.margin>
+                                </Button>
+                                <Region layoutX="299.0" layoutY="10.0" prefHeight="26.0" prefWidth="16.0"/>
+                                <Button fx:id="sortbutton" mnemonicParsing="false" onAction="#sortCourses"
+                                        prefHeight="27.0" prefWidth="86.0"
+                                        style="-fx-background-color: #2780FF; -fx-background-radius: 50;" text="Sort"
+                                        textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIcon fill="WHITE" glyphName="SORT"/>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <StackPane>
+                            <children>
+                                <ScrollPane fx:id="scrollPaneLayout" hbarPolicy="NEVER" maxHeight="-Infinity"
+                                            maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                            prefHeight="517.0" prefWidth="708.0"
+                                            style="-fx-background-color: transparent;-fx-fill: transparent;">
+                                    <content>
+                                        <TilePane fx:id="coursesPane" hgap="20.0" prefHeight="713.0" prefWidth="696.0"
+                                                  style="-fx-background-color: #1F1E2C;" vgap="30.0">
+                                            <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                                            </padding>
+                                        </TilePane>
+                                    </content>
+                                    <padding>
+                                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0"/>
+                                    </padding>
+                                </ScrollPane>
+                                <VBox fx:id="addCourseBox" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="451.0"
+                                      prefWidth="682.0" spacing="23.0">
+                                    <children>
+                                        <HBox>
+                                            <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0"
+                                                       prefWidth="704.0" text="Course Data" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="24.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                            <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0"
+                                                       prefWidth="94.0" text="Title" textFill="#c9cdd9">
+                                                    <font>
+                                                        <Font size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0"/>
+                                                <TextField fx:id="courseTitle" alignment="CENTER" prefHeight="30.0"
+                                                           prefWidth="432.0"
+                                                           style="-fx-background-color: #242635; -fx-text-fill: #fff;">
+                                                    <font>
+                                                        <Font size="14.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="60.0" spacing="20.0">
+                                            <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0"
+                                                       prefWidth="95.0" text="Description" textFill="#c9cdd9">
+                                                    <font>
+                                                        <Font size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" prefHeight="66.0" prefWidth="0.0"/>
+                                                <TextField fx:id="CourseDes" alignment="CENTER" prefHeight="66.0"
+                                                           prefWidth="432.0"
+                                                           style="-fx-background-color: #242635; -fx-text-fill: #fff;">
+                                                    <font>
+                                                        <Font size="14.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="68.0" spacing="20.0">
+                                            <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0"
+                                                       prefWidth="94.0" text="Price($)" textFill="#c9cdd9">
+                                                    <font>
+                                                        <Font size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0"/>
+                                                <TextField fx:id="CoursePrice" alignment="CENTER" prefHeight="30.0"
+                                                           prefWidth="434.0"
+                                                           style="-fx-background-color: #242635; -fx-text-fill: #fff;">
+                                                    <font>
+                                                        <Font size="14.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox spacing="22.0">
+                                            <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0"
+                                                       prefWidth="92.0" text="Diffculity" textFill="#c9cdd9">
+                                                    <font>
+                                                        <Font size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0"/>
+                                                <RadioButton contentDisplay="CENTER" mnemonicParsing="false"
+                                                             onAction="#courseDiffculity" prefHeight="26.0"
+                                                             prefWidth="88.0" text="Beginner" textFill="#ece5e5">
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="diffcuilty"/>
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton contentDisplay="CENTER" layoutX="120.0" layoutY="10.0"
+                                                             mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0"
+                                                             text="Intermidiate" textFill="#ece5e5">
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="diffcuilty1"/>
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton contentDisplay="CENTER" layoutX="120.0" layoutY="10.0"
+                                                             mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0"
+                                                             text="Advanced" textFill="#ece5e5">
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="diffcuilty2"/>
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Button alignment="CENTER" graphicTextGap="8.0" mnemonicParsing="false"
+                                                        onAction="#createCourseAction" prefHeight="27.0"
+                                                        prefWidth="109.0"
+                                                        style="-fx-background-color: #2780FF; -fx-background-radius: 50;"
+                                                        text="Add" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="13.0"/>
+                                                    </font>
+                                                    <graphic>
+                                                        <FontAwesomeIcon fill="WHITE" glyphName="PLUS"/>
+                                                    </graphic>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </StackPane>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
     <left>
-        <VBox alignment="TOP_CENTER" prefHeight="683.0" prefWidth="246.0" spacing="30.0" style="-fx-background-color: #242635;" BorderPane.alignment="CENTER">
+        <VBox alignment="TOP_CENTER" prefHeight="683.0" prefWidth="246.0" spacing="30.0"
+              style="-fx-background-color: #242635;" BorderPane.alignment="CENTER">
             <padding>
-                <Insets top="28.0" />
+                <Insets top="28.0"/>
             </padding>
             <children>
                 <HBox alignment="CENTER" prefHeight="44.0" prefWidth="236.0">
                     <children>
-                        <FontAwesomeIcon fill="#2780ff" glyphName="CODE" size="2.3em" />
-                        <Label prefHeight="23.0" prefWidth="131.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="CourseCode" textAlignment="CENTER" textFill="WHITE">
+                        <FontAwesomeIcon fill="#2780ff" glyphName="CODE" size="2.3em"/>
+                        <Label prefHeight="23.0" prefWidth="131.0" style="-fx-font-family: Poppins;"
+                               stylesheets="@../../../../../../../clone/Online-Courses-System/Program/src/css/style.css"
+                               text="CourseCode" textAlignment="CENTER" textFill="WHITE">
                             <font>
-                                <Font name="Arial Bold" size="22.0" />
+                                <Font name="Arial Bold" size="22.0"/>
                             </font>
                             <HBox.margin>
-                                <Insets left="10.0" />
+                                <Insets left="10.0"/>
                             </HBox.margin>
                         </Label>
                     </children>
@@ -44,293 +300,114 @@
                     <children>
                         <Label alignment="CENTER" prefHeight="27.0" prefWidth="52.0" text="Menu" textFill="#6b6c80">
                             <font>
-                                <Font size="16.0" />
+                                <Font size="16.0"/>
                             </font>
                         </Label>
                     </children>
                     <VBox.margin>
-                        <Insets />
+                        <Insets/>
                     </VBox.margin>
                     <padding>
-                        <Insets left="25.0" />
+                        <Insets left="25.0"/>
                     </padding>
                 </HBox>
-                <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToDashboard" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-weight: 700;" text="Dashboard" textFill="#aeaeb1">
+                <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity"
+                        minWidth="-Infinity" mnemonicParsing="false" onAction="#goToDashboard" prefHeight="48.0"
+                        prefWidth="200.0"
+                        style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-weight: 700;"
+                        text="Dashboard" textFill="#aeaeb1">
                     <cursor>
-                        <Cursor fx:constant="HAND" />
+                        <Cursor fx:constant="HAND"/>
                     </cursor>
                     <padding>
-                        <Insets left="-32.0" />
+                        <Insets left="-32.0"/>
                     </padding>
                     <font>
-                        <Font name="Arial Bold" size="18.0" />
+                        <Font name="Arial Bold" size="18.0"/>
                     </font>
                     <VBox.margin>
-                        <Insets left="10.0" top="-20.0" />
+                        <Insets left="10.0" top="-20.0"/>
                     </VBox.margin>
                     <graphic>
-                        <FontAwesomeIcon fill="#aeaeb1" glyphName="HOME" />
+                        <FontAwesomeIcon fill="#aeaeb1" glyphName="HOME"/>
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #2780FF; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-weight: 700;" text="My Learning" textFill="WHITE">
+                <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity"
+                        minWidth="-Infinity" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0"
+                        style="-fx-background-color: #2780FF; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-weight: 700;"
+                        text="My Learning" textFill="WHITE">
                     <cursor>
-                        <Cursor fx:constant="HAND" />
+                        <Cursor fx:constant="HAND"/>
                     </cursor>
                     <padding>
-                        <Insets left="-20.0" />
+                        <Insets left="-20.0"/>
                     </padding>
                     <font>
-                        <Font name="Arial Bold" size="18.0" />
+                        <Font name="Arial Bold" size="18.0"/>
                     </font>
                     <graphic>
-                        <FontAwesomeIcon fill="WHITE" glyphName="STAR" text="" />
+                        <FontAwesomeIcon fill="WHITE" glyphName="STAR" text=""/>
                     </graphic>
                     <VBox.margin>
-                        <Insets left="10.0" top="-20.0" />
+                        <Insets left="10.0" top="-20.0"/>
                     </VBox.margin>
                 </Button>
-                <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.08" prefHeight="8.0" prefWidth="170.0" stylesheets="@../../../css/style.css">
+                <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                           opacity="0.08" prefHeight="8.0" prefWidth="170.0"
+                           stylesheets="@../../../../../../../clone/Online-Courses-System/Program/src/css/style.css">
                     <VBox.margin>
-                        <Insets />
+                        <Insets/>
                     </VBox.margin>
                 </Separator>
                 <HBox alignment="CENTER_LEFT" prefHeight="2.0" prefWidth="246.0">
                     <children>
                         <Label alignment="CENTER" prefHeight="26.0" prefWidth="58.0" text="Account" textFill="#6b6c80">
                             <font>
-                                <Font size="16.0" />
+                                <Font size="16.0"/>
                             </font>
                         </Label>
                     </children>
                     <padding>
-                        <Insets left="25.0" />
+                        <Insets left="25.0"/>
                     </padding>
                 </HBox>
-                <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToSetting" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-family: Poppins-Medium;" text="Settings" textFill="#aeaeb1">
+                <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity"
+                        minWidth="-Infinity" mnemonicParsing="false" onAction="#goToSetting" prefHeight="48.0"
+                        prefWidth="200.0"
+                        style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-size: 18; -fx-font-weight: 700;"
+                        text="Settings" textFill="#aeaeb1">
                     <cursor>
-                        <Cursor fx:constant="HAND" />
+                        <Cursor fx:constant="HAND"/>
                     </cursor>
+                    <padding>
+                        <Insets left="-40.0"/>
+                    </padding>
                     <font>
-                        <Font name="Arial Bold" size="18.0" />
+                        <Font name="Arial Bold" size="18.0"/>
                     </font>
                     <graphic>
-                        <FontAwesomeIcon fill="#aeaeb1" glyphName="GEAR" />
+                        <FontAwesomeIcon fill="#aeaeb1" glyphName="GEAR"/>
                     </graphic>
-                    <VBox.margin>
-                        <Insets left="10.0" top="-20.0" />
-                    </VBox.margin>
-                    <padding>
-                        <Insets left="-60.0" />
-                    </padding>
                 </Button>
-                <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToLogin" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-family: Poppins-Medium;" text="Logout" textFill="#aeaeb1">
+                <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity"
+                        minWidth="-Infinity" mnemonicParsing="false" onAction="#goToLogin" prefHeight="48.0"
+                        prefWidth="200.0"
+                        style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-size: 18; -fx-font-weight: 700;"
+                        text="Logout" textFill="#aeaeb1">
                     <cursor>
-                        <Cursor fx:constant="HAND" />
+                        <Cursor fx:constant="HAND"/>
                     </cursor>
-                    <font>
-                        <Font name="Arial Bold" size="18.0" />
-                    </font>
                     <padding>
-                        <Insets left="-60.0" />
+                        <Insets left="-50.0"/>
                     </padding>
+                    <font>
+                        <Font name="Arial Bold" size="18.0"/>
+                    </font>
                     <graphic>
-                        <FontAwesomeIcon fill="#aeaeb1" glyphName="SIGN_OUT" onMouseClicked="#goToLogin" />
+                        <FontAwesomeIcon fill="#aeaeb1" glyphName="SIGN_OUT" onMouseClicked="#goToLogin"/>
                     </graphic>
                 </Button>
             </children>
         </VBox>
     </left>
-    <center>
-        <VBox fx:id="cardLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="714.0" style="-fx-background-color: #1F1E2C;" BorderPane.alignment="TOP_LEFT">
-            <children>
-                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="714.0" style="-fx-background-color: #242635;">
-                    <children>
-                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.66" prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: #343645; -fx-background-radius: 10;">
-                            <children>
-                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../../../img/search.png" />
-                                    </image>
-                                    <HBox.margin>
-                                        <Insets right="5.0" />
-                                    </HBox.margin>
-                                </ImageView>
-                                <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="20.0" prefWidth="10.0" />
-                                <TextField alignment="TOP_LEFT" prefHeight="26.0" prefWidth="236.0" promptText="Search or type" style="-fx-background-color: #343645;" />
-                            </children>
-                            <padding>
-                                <Insets left="10.0" />
-                            </padding>
-                            <HBox.margin>
-                                <Insets />
-                            </HBox.margin>
-                        </HBox>
-                    </children>
-                    <padding>
-                        <Insets left="20.0" />
-                    </padding>
-                    <VBox.margin>
-                        <Insets bottom="10.0" />
-                    </VBox.margin>
-                </HBox>
-                <VBox accessibleText="50" prefHeight="100.0" prefWidth="1674.0">
-                    <children>
-                        <Label prefHeight="58.0" prefWidth="154.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="My Learning" textAlignment="CENTER" textFill="WHITE">
-                            <font>
-                                <Font name="Arial Bold" size="25.0" />
-                            </font>
-                            <VBox.margin>
-                                <Insets left="20.0" />
-                            </VBox.margin>
-                        </Label>
-                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="679.0">
-                            <children>
-                                <Label alignment="CENTER" prefHeight="100.0" prefWidth="26.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="All" textAlignment="CENTER" textFill="WHITE">
-                                    <font>
-                                        <Font name="Arial Bold" size="17.0" />
-                                    </font>
-                                    <HBox.margin>
-                                        <Insets left="20.0" right="30.0" />
-                                    </HBox.margin>
-                                </Label>
-                                <Label alignment="CENTER" prefHeight="46.0" prefWidth="90.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="In Progress" textAlignment="CENTER" textFill="#6b6c80">
-                                    <font>
-                                        <Font name="Arial Bold" size="17.0" />
-                                    </font>
-                                    <HBox.margin>
-                                        <Insets right="30.0" />
-                                    </HBox.margin>
-                                </Label>
-                                <Label alignment="CENTER" prefHeight="46.0" prefWidth="91.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="Completed" textAlignment="CENTER" textFill="#6b6c80">
-                                    <font>
-                                        <Font name="Arial Bold" size="17.0" />
-                                    </font>
-                                </Label>
-                                <Region prefHeight="26.0" prefWidth="216.0" />
-                                <Button fx:id="addCourseB" mnemonicParsing="false" onAction="#AddCourse" style="-fx-background-color: #2780FF; -fx-background-radius: 12;" text="Add course" textFill="WHITE" visible="false">
-                                    <font>
-                                        <Font name="System Bold" size="13.0" />
-                                    </font>
-                                </Button>
-                        <Region layoutX="299.0" layoutY="10.0" prefHeight="26.0" prefWidth="16.0" />
-                        <Button layoutX="609.0" layoutY="10.0" mnemonicParsing="false" onAction="#sortCourses" prefHeight="27.0" prefWidth="62.0" style="-fx-background-color: #2780FF; -fx-background-radius: 12;" text="Sort" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="13.0" />
-                           </font>
-                        </Button>
-                            </children>
-                        </HBox>
-                  <StackPane>
-                     <children>
-                              <ScrollPane fx:id="scrollPaneLayout" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="708.0" style="-fx-background-color: transparent;-fx-fill: transparent;">
-                                  <content>
-                                      <TilePane fx:id="coursesPane" hgap="20.0" prefHeight="713.0" prefWidth="696.0" style="-fx-background-color: #1F1E2C;" vgap="30.0">
-                                          <padding>
-                                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                          </padding>
-                                      </TilePane>
-                                  </content>
-                                  <padding>
-                                      <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
-                                  </padding>
-                              </ScrollPane>
-                        <VBox fx:id="addCourseBox" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="451.0" prefWidth="682.0" spacing="23.0">
-                           <children>
-                              <HBox>
-                                 <children>
-                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="704.0" text="Course Data" textFill="WHITE">
-                                       <font>
-                                          <Font name="System Bold" size="24.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER_LEFT" spacing="20.0">
-                                 <children>
-                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="94.0" text="Title" textFill="#c9cdd9">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Label>
-                                    <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0" />
-                                    <TextField fx:id="courseTitle" alignment="CENTER" prefHeight="30.0" prefWidth="432.0" style="-fx-background-color: #242635; -fx-text-fill: #fff;">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="60.0" spacing="20.0">
-                                 <children>
-                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="95.0" text="Description" textFill="#c9cdd9">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Label>
-                                    <Separator orientation="VERTICAL" prefHeight="66.0" prefWidth="0.0" />
-                                    <TextField fx:id="CourseDes" alignment="CENTER" prefHeight="66.0" prefWidth="432.0" style="-fx-background-color: #242635; -fx-text-fill: #fff;">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="68.0" spacing="20.0">
-                                 <children>
-                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="94.0" text="Price($)" textFill="#c9cdd9">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Label>
-                                    <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0" />
-                                    <TextField fx:id="CoursePrice" alignment="CENTER" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: #242635; -fx-text-fill: #fff;">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                 </children>
-                              </HBox>
-                              <HBox spacing="22.0">
-                                 <children>
-                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="92.0" text="Diffculity" textFill="#c9cdd9">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Label>
-                                    <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0" />
-                                    <RadioButton contentDisplay="CENTER" mnemonicParsing="false" onAction="#courseDiffculity" prefHeight="26.0" prefWidth="88.0" text="Beginner" textFill="#ece5e5">
-                                       <toggleGroup>
-                                          <ToggleGroup fx:id="diffcuilty" />
-                                       </toggleGroup>
-                                    </RadioButton>
-                                    <RadioButton contentDisplay="CENTER" layoutX="120.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" text="Intermidiate" textFill="#ece5e5">
-                                       <toggleGroup>
-                                          <ToggleGroup fx:id="diffcuilty1" />
-                                       </toggleGroup>
-                                    </RadioButton>
-                                    <RadioButton contentDisplay="CENTER" layoutX="120.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" text="Advanced" textFill="#ece5e5">
-                                       <toggleGroup>
-                                          <ToggleGroup fx:id="diffcuilty2" />
-                                       </toggleGroup>
-                                    </RadioButton>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#createCourseAction" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: #2780FF; -fx-background-radius: 12;" text="Create" textFill="WHITE">
-                                       <font>
-                                          <Font name="System Bold" size="13.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                     </children>
-                  </StackPane>
-                    </children>
-                </VBox>
-            </children>
-        </VBox>
-    </center>
 </BorderPane>

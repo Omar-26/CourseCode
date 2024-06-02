@@ -1,32 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1F1E2C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.myQuizController">
-   <children>
-      <Label fx:id="question" alignment="TOP_CENTER" layoutX="12.0" layoutY="30.0" prefHeight="96.0" prefWidth="575.0" text="1- First Question .................. ?" textFill="#2780ff" wrapText="true">
-         <font>
-            <Font name="System Bold" size="22.0" />
-         </font>
-      </Label>
-      <Button fx:id="opt1" layoutX="89.0" layoutY="128.0" mnemonicParsing="false" onAction="#opt1Clicked" prefHeight="51.0" prefWidth="421.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;" text="Option 1" textFill="#1f1e2c" wrapText="true">
-         <font>
-            <Font size="24.0" />
-         </font></Button>
-      <Button fx:id="opt2" layoutX="89.0" layoutY="190.0" mnemonicParsing="false" onAction="#opt2Clicked" prefHeight="51.0" prefWidth="422.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;" text="Option 2" textFill="#1f1e2c" wrapText="true">
-         <font>
-            <Font size="24.0" />
-         </font></Button>
-      <Button fx:id="opt3" layoutX="89.0" layoutY="252.0" mnemonicParsing="false" onAction="#opt3Clicked" prefHeight="51.0" prefWidth="422.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;" text="Option 3" textFill="#1f1e2c" wrapText="true">
-         <font>
-            <Font size="24.0" />
-         </font></Button>
-      <Button fx:id="opt4" layoutX="88.0" layoutY="314.0" mnemonicParsing="false" onAction="#opt4Clicked" prefHeight="51.0" prefWidth="422.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;" text="Option 4" textFill="#1f1e2c" wrapText="true">
-         <font>
-            <Font size="24.0" />
-         </font></Button>
-   </children>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="683.0" prefWidth="960.0" style="-fx-background-color: #1F1E2C;"
+            xmlns="http://javafx.com/javafx/21" fx:controller="controller.myQuizController">
+    <children>
+        <Label fx:id="question" alignment="TOP_CENTER" layoutX="182.0" layoutY="125.0" prefHeight="126.0"
+               prefWidth="615.0" text="1- First Question .................. ?" textFill="#2780ff" wrapText="true">
+            <font>
+                <Font name="System Bold" size="22.0"/>
+            </font>
+        </Label>
+        <Button fx:id="opt1" layoutX="269.0" layoutY="278.0" mnemonicParsing="false" onAction="#opt1Clicked"
+                prefHeight="51.0" prefWidth="421.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;"
+                text="Option 1" textFill="#1f1e2c" wrapText="true">
+            <font>
+                <Font size="24.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <Button fx:id="opt2" layoutX="269.0" layoutY="340.0" mnemonicParsing="false" onAction="#opt2Clicked"
+                prefHeight="51.0" prefWidth="422.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;"
+                text="Option 2" textFill="#1f1e2c" wrapText="true">
+            <font>
+                <Font size="24.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <Button fx:id="opt3" layoutX="269.0" layoutY="402.0" mnemonicParsing="false" onAction="#opt3Clicked"
+                prefHeight="51.0" prefWidth="422.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;"
+                text="Option 3" textFill="#1f1e2c" wrapText="true">
+            <font>
+                <Font size="24.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <Button fx:id="opt4" layoutX="268.0" layoutY="464.0" mnemonicParsing="false" onAction="#opt4Clicked"
+                prefHeight="51.0" prefWidth="422.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;"
+                text="Option 4" textFill="#1f1e2c" wrapText="true">
+            <font>
+                <Font size="24.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+    </children>
 </AnchorPane>

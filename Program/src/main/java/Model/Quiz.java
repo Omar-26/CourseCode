@@ -1,7 +1,6 @@
-package system;
+package model;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Quiz implements displayable
 {
