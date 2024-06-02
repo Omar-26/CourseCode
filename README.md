@@ -1,38 +1,94 @@
-# 🌟 Online Course Management System
+<p align="center">
+  <img src="https://github.com/Omar-26/CourseCode/blob/main/Assets/courseCode.png?raw=true"  />
+  <h3 align="center">CourseCode</h3>
+  <p align="center">Online Courses Desktop App</p>
+  <p align="center">
+    <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Windows-blue.svg" alt="Platforms">
+  </p>
+</p>
 
-Welcome to the Online Course Management System! This cutting-edge software solution empowers educators, students, and administrators to seamlessly navigate the world of online learning.
+# Overview
 
-## 🚀 Overview
+The **Course Code** desktop application is designed to streamline course management, enhance student engagement, and provide efficient tools for instructors and administrators. Below are the key features:
 
-The Online Course Management System revolutionizes the way courses are created, managed, and delivered. With an intuitive interface and robust features, it simplifies the complexities of online education, offering a comprehensive platform for course enrollment, content creation, and progress tracking.
+### Dashboard
 
-## ✨ Features
+<p align="center"><img src="https://github.com/Omar-26/CourseCode/blob/main/Assets/dashboard.png?raw=true" /></p>
 
-- **User Authentication:** login system for students, instructors, and administrators.
-- **Course Management:** Effortlessly create, update, and delete courses with ease.
-- **Enrollment:** Seamlessly enroll in courses offered by instructors, ensuring a hassle-free learning experience.
-- **Content Creation:** Empower instructors to craft engaging quizzes, assignments, and course materials.
-- **Progress Tracking:** Track student progress and performance, providing valuable insights for educators.
-- **Role-based Access Control:** Tailored access levels for students, instructors, and administrators, ensuring a personalized experience for all users.
+### My Learning
 
-## 🏗️ System Architecture
+<p align="center"><img src="https://github.com/Omar-26/CourseCode/blob/main/Assets/mylearning.png?raw=true" /></p>
 
-The Online Course Management System is built on a robust model-view-controller (MVC) architecture, ensuring scalability, flexibility, and maintainability. Key components include:
+### Exclusive for Instructors
 
-- **Model:** Represents core data entities such as courses, users, quizzes, and assignments.
-- **View:** Delivers an intuitive and user-friendly interface for seamless interaction.
-- **Controller:** Orchestrates user requests, business logic, and data updates with precision and efficiency.
+<p align="center"><img src="https://github.com/Omar-26/CourseCode/blob/main/Assets/addcourse.png?raw=true" /></p>
 
-## 📚 Class Structure
+# Key Features
 
-- **LMS Class:** The central hub for managing accounts and courses within the system.
-- **Student Class:** Empowers students to explore and enroll in courses, providing a seamless learning journey.
-- **Instructor Class:** Equips instructors with tools to create, manage, and enrich course content, fostering an engaging learning environment.
-- **Course Class:** Encapsulates essential course information, including title, description, content, instructor details, and enrolled students.
-- **Quiz and Assignment Classes:** Specialized classes for managing quizzes, assignments, and other course materials, ensuring a dynamic learning experience.
+### User Authentication
 
-## 🎥 Demo Video
+- **Login System:** Secure login functionality for students, instructors, and administrators.
+- **User Input Validation:** Ensures valid input during login.
 
-Check out the demo video [here](https://drive.google.com/file/d/1tzYqa7XrNTaOuczIrDrM1C0hPUJlz8qc/view?usp=sharing) to see the Online Course Management System in action!
+### Course Management
 
-Let's embark on a journey of knowledge and discovery together! 🚀✨
+- **Effortless Course Creation:** Instructors can easily create, update, and delete courses.
+- **Course Details:** Display relevant information about each course.
+
+### Enrollment
+
+- **Seamless Enrollment:** Students can enroll in courses offered by instructors.
+- **Course Catalog:** Browse available courses.
+
+### Content Creation
+
+- **Engaging Quizzes and Assignments:** Instructors can create interactive quizzes and assignments.
+- **Course Materials:** Upload and organize course materials (lecture slides, handouts, etc.).
+
+### Progress Tracking
+
+- **Student Progress Dashboard:** Monitor student performance and track progress.
+- **Performance Metrics:** View statistics on student participation, grades, and completion rates.
+
+### Role-based Access Control
+
+- **Personalized Experience:** Different access levels for students, instructors, and administrators.
+- **Permissions:** Define who can perform specific actions (e.g., create courses, enroll students).
+
+# System Architecture: MVC Design Pattern
+
+The **Course Code** application follows the **Model-View-Controller (MVC)** design pattern, which provides a clear separation of concerns and promotes modularity. Here's how it fits into our system architecture:
+
+1. **Model:**
+   - Represents the data and business logic of the application.
+   - Manages data storage, retrieval, and manipulation.
+   - In our case, the model handles user authentication, course details, enrollment data, and progress tracking.
+
+2. **View:**
+   - Responsible for presenting data to the user.
+   - Displays the user interface (UI) elements, such as forms, buttons, and course listings.
+   - Interacts with the user and sends user input to the controller.
+   - In our application, views include login screens, course listings, and progress dashboards.
+
+3. **Controller:**
+   - Acts as an intermediary between the model and the view.
+   - Receives user input from the view and processes it.
+   - Updates the model based on user actions (e.g., creating a course, enrolling a student).
+   - Notifies the view to update when the model changes.
+   - In our case, controllers handle user authentication, course creation, and enrollment.
+
+By adhering to the MVC pattern, we achieve better code organization, maintainability, and scalability. Each layer has a specific role, making it easier to enhance or modify individual components without affecting the entire application.
+
+# Demo Video
+
+### **Wanna see courseCode in action ?**
+
+Check out the demo video [here]()
+
+# Contributing
+
+We welcome contributions! If you'd like to improve Course Code, please follow our contribution guidelines.
+
+# License
+
+This project is licensed under the MIT License.
