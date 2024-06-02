@@ -83,7 +83,7 @@ By adhering to the MVC pattern, we achieve better code organization, maintainabi
 
 ### **Wanna see courseCode in action ?**
 
-Check out the demo video [here]()
+Check out the demo video [here](https://youtu.be/OnFBNC_9f2w)
 
 # Contributing
 
