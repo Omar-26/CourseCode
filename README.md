@@ -92,3 +92,52 @@ We welcome contributions! If you'd like to improve Course Code, please follow ou
 # License
 
 This project is licensed under the MIT License.
+
+# Contact
+
+For any inquiries or support, please contact:
+
+<table>
+<tr>
+  <!-- Omar Ashraf -->
+    <td align="center" style="word-wrap: break-word; width: 170.0; height: 170.0">
+        <a href= https://github.com/Omar-26>
+            <img src=https://avatars.githubusercontent.com/u/110625103?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt= Omar Ashraf/>
+            <br />
+            <sub style="font-size:14px"><b>Omar Ashraf</b></sub>
+        </a>
+    </td>
+     <!-- Ahmed Ashraf -->
+    <td align="center" style="word-wrap: break-word; width: 170.0; height: 170.0">
+        <a href= https://github.com/AshrafByte >
+            <img src=https://avatars.githubusercontent.com/u/160413156?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt= Ahmed Sallam/>
+            <br />
+            <sub style="font-size:14px"><b>Ahmed Ashraf</b></sub>
+        </a>
+    </td>
+  <!-- Abdelrahman Ezz -->
+    <td align="center" style="word-wrap: break-word; width: 170.0; height: 170.0">
+        <a href= https://github.com/abdoezz1 >
+            <img src=https://avatars.githubusercontent.com/u/133367786?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt= Abdelrahman Ezz/>
+            <br />
+            <sub style="font-size:14px"><b>Abdelrahman Ezz</b></sub>
+        </a>
+    </td>
+  <!-- Rana Ayman -->
+    <td align="center" style="word-wrap: break-word; width: 170.0; height: 170.0">
+        <a href= https://github.com/RanaAyman54 >
+            <img src=https://avatars.githubusercontent.com/u/143912782?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt= Abdulrahman Saeed/>
+            <br />
+            <sub style="font-size:14px"><b>Rana Ayman</b></sub>
+        </a>
+    </td>
+  <!-- Farah Amr -->
+    <td align="center" style="word-wrap: break-word; width: 170.0; height: 170.0">
+        <a href= https://github.com/FaraH922 >
+            <img src= https://avatars.githubusercontent.com/u/167699394?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt= Ahmed Helmy/>
+            <br />
+            <sub style="font-size:14px"><b>Farah Amr </b></sub>
+        </a>
+    </td>
+</tr>
+</table>
